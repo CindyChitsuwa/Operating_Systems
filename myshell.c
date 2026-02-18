@@ -32,7 +32,7 @@ int main() {
 
         char *ptr = line;
 
-        // Parse input manually (supports quotes and redirection)
+        // Parse input manually 
         while (*ptr) {
 
             // Skip spaces
@@ -71,7 +71,7 @@ int main() {
                 }
             }
 
-            // Handle output redirection (overwrite or append)
+            // Handle output redirection 
             else if (*ptr == '>') {
                 ptr++;
 
@@ -108,17 +108,17 @@ int main() {
             }
         }
 
-        args[argc] = NULL;  // Required for execvp
+        args[argc] = NULL;  
 
         if (argc == 0)
             continue;
 
-        // Built-in command: exit
+        // Built in command: exit
         if (strcmp(args[0], "exit") == 0) {
             break;
         }
 
-        // Built-in command: cd
+        // Built in command: cd
         if (strcmp(args[0], "cd") == 0) {
 
             if (args[1] == NULL) {
