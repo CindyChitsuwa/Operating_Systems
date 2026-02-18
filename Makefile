@@ -7,7 +7,7 @@ CC=gcc
 CFLAGS=-Wall -g
 
 #Define the target executable name 
-TARGET=Atask
+TARGET=myshell
 
 #'all' is the default target.
 all: $(TARGET)
